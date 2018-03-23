@@ -109,7 +109,28 @@
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-72da6987b833baf2.png">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-32c6d10174de9458.png">
-<meta property="og:updated_time" content="2018-03-23T06:36:48.352Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-059eac9dfe503d13.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-0bb92492237ae9b1.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-58da3cebb829b559.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-595bda983b42f2eb.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-49e5f62e2f07d606.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-26fc1e257dfc044f.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-0d95e7a95891109a.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-48a9f9afd9fdffd6.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-b4c617b2e1657a0a.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-8f830f371f9c9a91.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-5d7769fa7f46f9c8.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-d229a46b6e2d61d8.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-ea2ca3af0b0af194.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-628169edc37efe5b.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-3bfb636cb7bef4c2.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-ec2dcf71e514bd25.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-d9d0498448544b46.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-daf0949e1bc19166.png">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-583f269c56c98260.png">
+<meta property="og:updated_time" content="2018-03-23T08:40:28.276Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="转载 推荐算法--协同过滤">
 <meta name="twitter:description" content="什么是协同过滤 协同过滤推荐（Collaborative Filtering recommendation）是在信息过滤和信息系统中正迅速成为一项很受欢迎的技术。与传统的基于内容过滤直接分析内容进行推荐不同，协同过滤分析用户兴趣，在用户群中找到指定用户的相似（兴趣）用户，综合这些相似用户对某一信息的评价，形成系统对该指定用户对此信息的喜好程度预测。 协同过滤是迄今为止最成功的推荐系统技术，被应用在">
@@ -405,45 +426,33 @@
 <p>在协同过滤中，一个重要的环节就是如何选择合适的相似度计算方法，常用的两种相似度计算方法包括皮尔逊相关系数和余弦相似度等。皮尔逊相关系数的计算公式如下所示：</p>
 <p>皮尔逊相关系数<br>其中，i表示项，例如商品；Iu表示用户u评价的项集；Iv表示用户v评价的项集；ru，i表示用户u对项i的评分；rv，i表示用户v对项i的评分；表示用户u的平均评分；表示用户v的平均评分。<br><img src="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png" alt="皮尔逊相关系数"><br>另外，余弦相似度的计算公式如下所示：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-72da6987b833baf2.png" alt="余弦相似度"><br>余弦相似度<br>1.3计算用户u对未评分商品的预测分值<br>另一个重要的环节就是计算用户u对未评分商品的预测分值。首先根据上一步中的相似度计算，寻找用户u的邻居集N∈U，其中N表示邻居集，U表示用户集。然后，结合用户评分数据集，预测用户u对项i的评分，计算公式如下所示：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-32c6d10174de9458.png" alt="预测用户u对项i的评分"><br>预测用户u对项i的评分<br>其中，s（u，u’）表示用户u和用户u’的相似度。</p>
 <p>1.4通过例子理解</p>
-<p>假设有如下电子商务评分数据集，预测用户C对商品4的评分。<br>![预电子商务评分数据集](<a href="https://upload-images.jianshu.io/upload_images/5687393-059eac9dfe503d13.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-059eac9dfe503d13.png）</a><br>电子商务评分数据集<br>表中？表示评分未知。根据基于用户的协同过滤算法步骤，计算用户C对商品4的评分，其步骤如下所示。<br>（1）寻找用户C的邻居<br>从数据集中可以发现，只有用户A和用户D对商品4评过分，因此候选邻居只有2个，分别为用户A和用户D。用户A的平均评分为4，用户C的平均评分为3.667，用户D的平均评分为3。<br>![寻找用户C的邻居](<a href="https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png）</a></p>
-<p>image.png</p>
-<p>根据皮尔逊相关系数公式：<br>红色区域计算C用户与A用户，用户C和用户A的相似度为：<br>![用户C和用户A的相似度](<a href="https://upload-images.jianshu.io/upload_images/5687393-0bb92492237ae9b1.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-0bb92492237ae9b1.png）</a></p>
-<p>用户C和用户A的相似度</p>
-<p>蓝色区域计算C用户与D 用户的相似度为:<br>C用户与D 用户的相似度<br>（2）预测用户C对商品4的评分<br>根据上述评分预测公式，计算用户C对商品4的评分，如下所示：</p>
-<p>用户C对商品4的评分<br>依此类推，可以计算出其他未知的评分。</p>
+<p>假设有如下电子商务评分数据集，预测用户C对商品4的评分。<br><img src="https://upload-images.jianshu.io/upload_images/5687393-059eac9dfe503d13.png" alt="预电子商务评分数据集"><br>电子商务评分数据集<br>表中？表示评分未知。根据基于用户的协同过滤算法步骤，计算用户C对商品4的评分，其步骤如下所示。<br>（1）寻找用户C的邻居<br>从数据集中可以发现，只有用户A和用户D对商品4评过分，因此候选邻居只有2个，分别为用户A和用户D。用户A的平均评分为4，用户C的平均评分为3.667，用户D的平均评分为3。<br><img src="https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png" alt="图片"><br><img src="https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png" alt="寻找用户C的邻居"></p>
+<p>根据皮尔逊相关系数公式：<br>红色区域计算C用户与A用户，用户C和用户A的相似度为：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-0bb92492237ae9b1.png" alt="用户C和用户A的相似度"></p>
+<p>蓝色区域计算C用户与D 用户的相似度为:<br>C用户与D 用户的相似度<br><img src="https://upload-images.jianshu.io/upload_images/5687393-58da3cebb829b559.png" alt="C用户与D 用户的相似度"><br>（2）预测用户C对商品4的评分<br>根据上述评分预测公式，计算用户C对商品4的评分，如下所示：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-595bda983b42f2eb.png" alt="C对商品4的评分"><br>用户C对商品4的评分<br>依此类推，可以计算出其他未知的评分。</p>
 <p>2.基于项目的协同过滤</p>
 <p>以用户为基础的协同推荐算法随着用户数量的增多，计算的时间就会变长，所以在2001年Sarwar提出了基于项目的协同过滤推荐算法(Item-based Collaborative Filtering Algorithms)。以项目为基础的协同过滤方法有一个基本的假设“能够引起用户兴趣的项目，必定与其之前评分高的项目相似”，通过计算项目之间的相似性来代替用户之间的相似性。</p>
 <p>2.1方法步骤：</p>
 <p>1.收集用户信息<br>同以用户为基础（User-based）的协同过滤。<br>2.针对项目的最近邻搜索<br>先计算已评价项目和待预测项目的相似度，并以相似度作为权重，加权各已评价项目的分数，得到待预测项目的预测值。例如：要对项目 A 和项目 B 进行相似性计算，要先找出同时对 A 和 B 打过分的组合，对这些组合进行相似度计算，常用的算法同以用户为基础（User-based）的协同过滤。<br>3.产生推荐结果<br>以项目为基础的协同过滤不用考虑用户间的差别，所以精度比较差。但是却不需要用户的历史数据，或是进行用户识别。对于项目来讲，它们之间的相似性要稳定很多，因此可以离线完成工作量最大的相似性计算步骤，从而降低了在线计算量，提高推荐效率，尤其是在用户多于项目的情形下尤为显著。</p>
 <p>基于项目（Item-Based）的协同过滤算法是常见的另一种算法。与User-Based协同过滤算法不一样的是，Item-Based协同过滤算法计算Item之间的相似度，从而预测用户评分。也就是说该算法可以预先计算Item之间的相似度，这样就可提高性能。Item-Based协同过滤算法是通过用户评分数据和计算的Item相似度矩阵，从而对目标Item进行预测的。</p>
 <p>2.2相似度计算方法</p>
-<p>和User-Based协同过滤算法类似，需要先计算Item之间的相似度。并且，计算相似度的方法也可以采用皮尔逊关系系数或者余弦相似度，这里给出一种电子商务系统常用的相似度计算方法，即基于物品的协同过滤算法，其中相似度计算公式如下所示：</p>
-<p>image.png<br>这里，分母|N(i)|是喜欢物品i的用户数，而分子|N(i)∩N(j)|是同时喜欢物品i和j的用户，但是如果物品j很热门，就会导致Wij很大接近于1。因此避免推荐出热门的物品，我们使用下面的公式：</p>
-<p>基于物品的相似度<br>从上面的定义可以看出，在协同过滤中两个物品产生相似度是因为他们共同被很多用户喜欢，也就是说每个用户都可以通过他们的历史兴趣列表给物品“贡献”相似度。</p>
-<p>计算物品相似度首先建立用户-物品倒排表（即对每个用户建立一个包含他喜欢的物品的列表），然后对每个用户，将他物品列表中的物品两两在共现矩阵中加1。</p>
-<p>代码<br>图例</p>
+<p>和User-Based协同过滤算法类似，需要先计算Item之间的相似度。并且，计算相似度的方法也可以采用皮尔逊关系系数或者余弦相似度，这里给出一种电子商务系统常用的相似度计算方法，即基于物品的协同过滤算法，其中相似度计算公式如下所示：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-49e5f62e2f07d606.png" alt="image"><br>image.png<br>这里，分母|N(i)|是喜欢物品i的用户数，而分子|N(i)∩N(j)|是同时喜欢物品i和j的用户，但是如果物品j很热门，就会导致Wij很大接近于1。因此避免推荐出热门的物品，我们使用下面的公式：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-26fc1e257dfc044f.png" alt="image"><br>基于物品的相似度<br>从上面的定义可以看出，在协同过滤中两个物品产生相似度是因为他们共同被很多用户喜欢，也就是说每个用户都可以通过他们的历史兴趣列表给物品“贡献”相似度。</p>
+<p>计算物品相似度首先建立用户-物品倒排表（即对每个用户建立一个包含他喜欢的物品的列表），然后对每个用户，将他物品列表中的物品两两在共现矩阵中加1。<br><img src="https://upload-images.jianshu.io/upload_images/5687393-0d95e7a95891109a.png" alt="image"></p>
+<p>代码<br><img src="https://upload-images.jianshu.io/upload_images/5687393-48a9f9afd9fdffd6.png" alt="image"><br>图例</p>
 <p>根据矩阵计算每两个物品之间的相似度wij。</p>
 <p>2.3用户u对于物品j的兴趣</p>
-<p>得到物品之间的相似度后，可以根据如下公式计算用户u对于物品j的兴趣：</p>
-<p>用户u对于物品j的兴趣<br>image.png<br>这里N(u)是用户喜欢的物品的集合，S(j,K)是和物品j最相似的K个物品的集合，wji是物品j和i的相似度，rui是用户u对物品i的兴趣。（对于隐反馈数据集，如果用户u对物品i有过行为，即可令rui=1。）该公式的含义是，和用户历史上感兴趣的物品越相似的物品，越有可能在用户的推荐列表中获得比较高的排名。</p>
+<p>得到物品之间的相似度后，可以根据如下公式计算用户u对于物品j的兴趣：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-b4c617b2e1657a0a.png" alt="image"><br>用户u对于物品j的兴趣<br><img src="https://upload-images.jianshu.io/upload_images/5687393-8f830f371f9c9a91.png" alt="image"><br>image.png<br>这里N(u)是用户喜欢的物品的集合，S(j,K)是和物品j最相似的K个物品的集合，wji是物品j和i的相似度，rui是用户u对物品i的兴趣。（对于隐反馈数据集，如果用户u对物品i有过行为，即可令rui=1。）该公式的含义是，和用户历史上感兴趣的物品越相似的物品，越有可能在用户的推荐列表中获得比较高的排名。</p>
 <p>当我们看到这里的时候很可能由于自己功底不足，很难看懂公式中的i∈N(u)∩S(j,K)。</p>
-<p>我们来看另外一种计算方式：</p>
+<p>我们来看另外一种计算方式：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-5d7769fa7f46f9c8.png" alt="image"></p>
 <p>矩阵<br>其中，Pa为新用户对已有产品的向量，T为物品的共现矩阵，得到的P`a为新用户对每个产品的兴趣度。</p>
 <p>那么就可以理解上述公式的i∈N(u)∩S(j,K)，我们在下面的例子中详细讲解。</p>
 <p>2.4举例</p>
 <p>现有用户的访问的记录如下图所示：</p>
-<p>用户的访问<br>他的共现矩阵为：</p>
-<p>共现矩阵<br>通过公式计算相似度：</p>
-<p>Wa,b<br>以此类推得到相似度的共现矩阵：</p>
-<p>相似度的共现矩阵<br>此时若有新用户E，访问的a,b,d三个物品，那么可以看做向量P：</p>
-<p>向量P<br>那么P`为矩阵相乘：</p>
-<p>P`<br>此时得到了对于用户E，c和e两个物品的兴趣度是相同的。</p>
+<p>用户的访问<br><img src="https://upload-images.jianshu.io/upload_images/5687393-d229a46b6e2d61d8.png" alt="image"><br>他的共现矩阵为：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-ea2ca3af0b0af194.png" alt="image"><br>共现矩阵<br>通过公式计算相似度：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-628169edc37efe5b.png" alt="image"><br>Wa,b<br>以此类推得到相似度的共现矩阵：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-3bfb636cb7bef4c2.png" alt="image"><br>相似度的共现矩阵<br>此时若有新用户E，访问的a,b,d三个物品，那么可以看做向量P：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-ec2dcf71e514bd25.png" alt="image"><br>向量P<br>那么P<code>为矩阵相乘：
+![image](https://upload-images.jianshu.io/upload_images/5687393-4bfc473aa3729a81.png)
+P</code><br>此时得到了对于用户E，c和e两个物品的兴趣度是相同的。</p>
 <p>2.5理解公式i∈N(u)∩S(j,K)</p>
-<p>那么现在我们来理解公式i∈N(u)∩S(j,K)：<br>对于用户E，已经访问了a,b,d，那么，N(u)={a,b,d}；还有两个未访问物品c,e，那么j={c,e}；<br>当j=c时，对于和物品j最相似的K个物品的集合为{a,d,e}，那么S(j,K)={a,d,e}；得出N(u)∩S(j,K)={a,d},如下图所示：</p>
-<p>image.png</p>
-<p>再来看矩阵相乘中的c行，乘以P，实际上就是上述N(u)∩S(j,K)={a,d}的相似度求和。</p>
-<p>image.png<br>同理，当j=e时，对于和物品j最相似的K个物品的集合为{b,c,d}，那么S(j,K)={b,c,d}；得出N(u)∩S(j,K)={b,d};如下图所示：</p>
-<p>image.png<br>再来看矩阵相乘中的e行，乘以P，实际上就是上述N(u)∩S(j,K)={b,d}的相似度求和。</p>
+<p>那么现在我们来理解公式i∈N(u)∩S(j,K)：<br>对于用户E，已经访问了a,b,d，那么，N(u)={a,b,d}；还有两个未访问物品c,e，那么j={c,e}；<br>当j=c时，对于和物品j最相似的K个物品的集合为{a,d,e}，那么S(j,K)={a,d,e}；得出N(u)∩S(j,K)={a,d},如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-d9d0498448544b46.png" alt="image"><br>image.png</p>
+<p>再来看矩阵相乘中的c行，乘以P，实际上就是上述N(u)∩S(j,K)={a,d}的相似度求和。<br><img src="https://upload-images.jianshu.io/upload_images/5687393-daf0949e1bc19166.png" alt="image"><br>image.png<br>同理，当j=e时，对于和物品j最相似的K个物品的集合为{b,c,d}，那么S(j,K)={b,c,d}；得出N(u)∩S(j,K)={b,d};如下图所示：<br><img src="https://upload-images.jianshu.io/upload_images/5687393-583f269c56c98260.png" alt="image"><br>image.png<br>再来看矩阵相乘中的e行，乘以P，实际上就是上述N(u)∩S(j,K)={b,d}的相似度求和。</p>
 <p>作者：小灰灰besty<br>链接：<a href="https://www.jianshu.com/p/5463ab162a58" target="_blank" rel="noopener">https://www.jianshu.com/p/5463ab162a58</a><br>來源：简书</p>
 
       
@@ -463,7 +472,7 @@
   <p><span>本文标题:</span><a href="/2018/03/23/推荐算法-协同过滤/">转载 推荐算法--协同过滤</a></p>
   <p><span>文章作者:</span><a href="/" title="访问 kaolabear 的个人博客">kaolabear</a></p>
   <p><span>发布时间:</span>2018年03月23日 - 13:03</p>
-  <p><span>最后更新:</span>2018年03月23日 - 14:03</p>
+  <p><span>最后更新:</span>2018年03月23日 - 16:03</p>
   <p><span>原始链接:</span><a href="/2018/03/23/推荐算法-协同过滤/" title="转载 推荐算法--协同过滤">http://yoursite.com/2018/03/23/推荐算法-协同过滤/</a>
     <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2018/03/23/推荐算法-协同过滤/"  aria-label="复制成功！"></i></span>
   </p>
