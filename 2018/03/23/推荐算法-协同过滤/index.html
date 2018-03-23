@@ -107,7 +107,8 @@
 <meta property="og:description" content="什么是协同过滤 协同过滤推荐（Collaborative Filtering recommendation）是在信息过滤和信息系统中正迅速成为一项很受欢迎的技术。与传统的基于内容过滤直接分析内容进行推荐不同，协同过滤分析用户兴趣，在用户群中找到指定用户的相似（兴趣）用户，综合这些相似用户对某一信息的评价，形成系统对该指定用户对此信息的喜好程度预测。 协同过滤是迄今为止最成功的推荐系统技术，被应用在">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png">
-<meta property="og:updated_time" content="2018-03-23T06:32:00.070Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-72da6987b833baf2.png">
+<meta property="og:updated_time" content="2018-03-23T06:33:50.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="转载 推荐算法--协同过滤">
 <meta name="twitter:description" content="什么是协同过滤 协同过滤推荐（Collaborative Filtering recommendation）是在信息过滤和信息系统中正迅速成为一项很受欢迎的技术。与传统的基于内容过滤直接分析内容进行推荐不同，协同过滤分析用户兴趣，在用户群中找到指定用户的相似（兴趣）用户，综合这些相似用户对某一信息的评价，形成系统对该指定用户对此信息的喜好程度预测。 协同过滤是迄今为止最成功的推荐系统技术，被应用在">
@@ -402,11 +403,11 @@
 <p>1.2如何选择合适的相似度计算方法</p>
 <p>在协同过滤中，一个重要的环节就是如何选择合适的相似度计算方法，常用的两种相似度计算方法包括皮尔逊相关系数和余弦相似度等。皮尔逊相关系数的计算公式如下所示：</p>
 <p>皮尔逊相关系数<br>其中，i表示项，例如商品；Iu表示用户u评价的项集；Iv表示用户v评价的项集；ru，i表示用户u对项i的评分；rv，i表示用户v对项i的评分；表示用户u的平均评分；表示用户v的平均评分。<br><img src="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png" alt="皮尔逊相关系数"><br>另外，余弦相似度的计算公式如下所示：</p>
-<p>余弦相似度<br>1.3计算用户u对未评分商品的预测分值<br><a href="https://upload-images.jianshu.io/upload_images/5687393-72da6987b833baf2.png" target="_blank" rel="noopener">余弦相似度</a><br>另一个重要的环节就是计算用户u对未评分商品的预测分值。首先根据上一步中的相似度计算，寻找用户u的邻居集N∈U，其中N表示邻居集，U表示用户集。然后，结合用户评分数据集，预测用户u对项i的评分，计算公式如下所示：<br>[预测用户u对项i的评分](<a href="https://upload-images.jianshu.io/upload_images/5687393-32c6d10174de9458.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-32c6d10174de9458.png）</a><br>预测用户u对项i的评分<br>其中，s（u，u’）表示用户u和用户u’的相似度。</p>
+<p>余弦相似度<br>1.3计算用户u对未评分商品的预测分值<br><img src="https://upload-images.jianshu.io/upload_images/5687393-72da6987b833baf2.png" alt="余弦相似度"><br>另一个重要的环节就是计算用户u对未评分商品的预测分值。首先根据上一步中的相似度计算，寻找用户u的邻居集N∈U，其中N表示邻居集，U表示用户集。然后，结合用户评分数据集，预测用户u对项i的评分，计算公式如下所示：<br>![预测用户u对项i的评分](<a href="https://upload-images.jianshu.io/upload_images/5687393-32c6d10174de9458.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-32c6d10174de9458.png）</a><br>预测用户u对项i的评分<br>其中，s（u，u’）表示用户u和用户u’的相似度。</p>
 <p>1.4通过例子理解</p>
-<p>假设有如下电子商务评分数据集，预测用户C对商品4的评分。<br>[预电子商务评分数据集](<a href="https://upload-images.jianshu.io/upload_images/5687393-059eac9dfe503d13.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-059eac9dfe503d13.png）</a><br>电子商务评分数据集<br>表中？表示评分未知。根据基于用户的协同过滤算法步骤，计算用户C对商品4的评分，其步骤如下所示。<br>（1）寻找用户C的邻居<br>从数据集中可以发现，只有用户A和用户D对商品4评过分，因此候选邻居只有2个，分别为用户A和用户D。用户A的平均评分为4，用户C的平均评分为3.667，用户D的平均评分为3。<br>[寻找用户C的邻居](<a href="https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png）</a></p>
+<p>假设有如下电子商务评分数据集，预测用户C对商品4的评分。<br>![预电子商务评分数据集](<a href="https://upload-images.jianshu.io/upload_images/5687393-059eac9dfe503d13.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-059eac9dfe503d13.png）</a><br>电子商务评分数据集<br>表中？表示评分未知。根据基于用户的协同过滤算法步骤，计算用户C对商品4的评分，其步骤如下所示。<br>（1）寻找用户C的邻居<br>从数据集中可以发现，只有用户A和用户D对商品4评过分，因此候选邻居只有2个，分别为用户A和用户D。用户A的平均评分为4，用户C的平均评分为3.667，用户D的平均评分为3。<br>![寻找用户C的邻居](<a href="https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-c227c404ee587842.png）</a></p>
 <p>image.png</p>
-<p>根据皮尔逊相关系数公式：<br>红色区域计算C用户与A用户，用户C和用户A的相似度为：<br>[用户C和用户A的相似度](<a href="https://upload-images.jianshu.io/upload_images/5687393-0bb92492237ae9b1.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-0bb92492237ae9b1.png）</a></p>
+<p>根据皮尔逊相关系数公式：<br>红色区域计算C用户与A用户，用户C和用户A的相似度为：<br>![用户C和用户A的相似度](<a href="https://upload-images.jianshu.io/upload_images/5687393-0bb92492237ae9b1.png）" target="_blank" rel="noopener">https://upload-images.jianshu.io/upload_images/5687393-0bb92492237ae9b1.png）</a></p>
 <p>用户C和用户A的相似度</p>
 <p>蓝色区域计算C用户与D 用户的相似度为:<br>C用户与D 用户的相似度<br>（2）预测用户C对商品4的评分<br>根据上述评分预测公式，计算用户C对商品4的评分，如下所示：</p>
 <p>用户C对商品4的评分<br>依此类推，可以计算出其他未知的评分。</p>
