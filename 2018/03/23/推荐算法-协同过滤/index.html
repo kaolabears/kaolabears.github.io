@@ -106,12 +106,12 @@
 <meta property="og:site_name" content="kaolabear">
 <meta property="og:description" content="什么是协同过滤 协同过滤推荐（Collaborative Filtering recommendation）是在信息过滤和信息系统中正迅速成为一项很受欢迎的技术。与传统的基于内容过滤直接分析内容进行推荐不同，协同过滤分析用户兴趣，在用户群中找到指定用户的相似（兴趣）用户，综合这些相似用户对某一信息的评价，形成系统对该指定用户对此信息的喜好程度预测。 协同过滤是迄今为止最成功的推荐系统技术，被应用在">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png"皮尔逊相关系数"">
-<meta property="og:updated_time" content="2018-03-23T06:05:38.293Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png">
+<meta property="og:updated_time" content="2018-03-23T06:06:23.938Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="转载 推荐算法--协同过滤">
 <meta name="twitter:description" content="什么是协同过滤 协同过滤推荐（Collaborative Filtering recommendation）是在信息过滤和信息系统中正迅速成为一项很受欢迎的技术。与传统的基于内容过滤直接分析内容进行推荐不同，协同过滤分析用户兴趣，在用户群中找到指定用户的相似（兴趣）用户，综合这些相似用户对某一信息的评价，形成系统对该指定用户对此信息的喜好程度预测。 协同过滤是迄今为止最成功的推荐系统技术，被应用在">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png"皮尔逊相关系数"">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png">
 
 
 
@@ -401,7 +401,7 @@
 <p>给定用户评分数据矩阵R，基于用户的协同过滤算法需要定义相似度函数s：U×U→R，以计算用户之间的相似度，然后根据评分数据和相似矩阵计算推荐结果。</p>
 <p>1.2如何选择合适的相似度计算方法</p>
 <p>在协同过滤中，一个重要的环节就是如何选择合适的相似度计算方法，常用的两种相似度计算方法包括皮尔逊相关系数和余弦相似度等。皮尔逊相关系数的计算公式如下所示：</p>
-<p>皮尔逊相关系数<br>其中，i表示项，例如商品；Iu表示用户u评价的项集；Iv表示用户v评价的项集；ru，i表示用户u对项i的评分；rv，i表示用户v对项i的评分；表示用户u的平均评分；表示用户v的平均评分。<br><img src="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png&quot;皮尔逊相关系数&quot;" alt="皮尔逊相关系数"><br>另外，余弦相似度的计算公式如下所示：</p>
+<p>皮尔逊相关系数<br>其中，i表示项，例如商品；Iu表示用户u评价的项集；Iv表示用户v评价的项集；ru，i表示用户u对项i的评分；rv，i表示用户v对项i的评分；表示用户u的平均评分；表示用户v的平均评分。<br><img src="https://upload-images.jianshu.io/upload_images/5687393-1d2fef93d83ccf3b.png" alt="皮尔逊相关系数"><br>另外，余弦相似度的计算公式如下所示：</p>
 <p>余弦相似度<br>1.3计算用户u对未评分商品的预测分值</p>
 <p>另一个重要的环节就是计算用户u对未评分商品的预测分值。首先根据上一步中的相似度计算，寻找用户u的邻居集N∈U，其中N表示邻居集，U表示用户集。然后，结合用户评分数据集，预测用户u对项i的评分，计算公式如下所示：</p>
 <p>预测用户u对项i的评分<br>其中，s（u，u’）表示用户u和用户u’的相似度。</p>
